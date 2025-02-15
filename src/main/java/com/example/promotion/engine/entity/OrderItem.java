@@ -3,10 +3,13 @@ package com.example.promotion.engine.entity;
 public class OrderItem {
     private Product product;
     private int quantity;
-    private double price;
     private double discount = 0.0;
 
     private boolean isPromotionApplied = false;
+
+
+
+    private double totalPrice;
 
     public OrderItem(Product product, int quantity) {
         this.product = product;
@@ -52,5 +55,13 @@ public class OrderItem {
 
     public void setPromotionApplied(boolean promotionApplied) {
         isPromotionApplied = promotionApplied;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

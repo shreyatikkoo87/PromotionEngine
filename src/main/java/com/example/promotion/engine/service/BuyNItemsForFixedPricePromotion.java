@@ -1,9 +1,11 @@
 package com.example.promotion.engine.service;
 
-
 import com.example.promotion.engine.entity.Order;
 import com.example.promotion.engine.entity.OrderItem;
+import com.example.promotion.engine.service.IPromotion;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BuyNItemsForFixedPricePromotion implements IPromotion {
     private final String productId;
     private final int minQuantity;
@@ -16,22 +18,26 @@ public class BuyNItemsForFixedPricePromotion implements IPromotion {
     }
 
     /**
-     * API to validate the promotion is applicable to order item
-     * @param order
-     * @return
+     * Check if the promotion is applicable to the order.
+     *
+     * @param order the order object.
+     * @return true if applicable, false otherwise.
      */
     @Override
     public boolean isApplicable(Order order) {
+        // Check if the order contains the required product with enough quantity
         for (OrderItem item : order.getItems()) {
-            if (item.getProduct().getId().equals(productId) && !item.isPromotionApplied())
-                return true;
+            if (item.getProduct().getId().equals(productId) && item.getQuantity() >= minQuantity) {
+                return true; // Promotion is applicable if the product is found and quantity is sufficient
+            }
         }
-        return false;
+        return false; // Promotion is not applicable
     }
 
     /**
-     * API to apply the promotion to order item
-     * @param order
+     * Apply the promotion to the order.
+     *
+     * @param order the order object to apply the promotion to.
      */
     @Override
     public void apply(Order order) {
@@ -48,4 +54,6 @@ public class BuyNItemsForFixedPricePromotion implements IPromotion {
             }
         }
     }
+
 }
+
