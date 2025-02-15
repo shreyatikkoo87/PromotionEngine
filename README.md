@@ -1,17 +1,4 @@
 # ProductPromotionalEngine
-This is a promotional rule engine developed with Java Springboot and EasyRule
-
-
-
-
-
-
-
-
-
-
-Product Promotion Engine
-Authored by: Tapendu Bhowmik 
 
 
 
@@ -56,24 +43,3 @@ Scenario C
 5 * B 45 + 45 + 1 * 30
 1 * C -
 1 * D 30
-
-Technical details
-Programming language: Java 1.8
-Framework used: Spring boot
-Test Framework: Junit, Mockito
-Rule Engine: Easy Rule
-
-Sample Post Request
-{
-  "orderId" : 1,
-  "productList" :[{"id" : "A",
-                   "quantity" : 5},
-                  {"id" : "B",
-                   "quantity" : 3},
-                  {"id" : "C",
-                   "quantity" : 1},
-                  {"id" : "D",
-                   "quantity" : 1}]
-}
-Sample Output
-Total price of the Cart is : 335.0
