@@ -101,16 +101,4 @@ public class BuyNItemsForFixedPricePromotionTest {
         double actual = order.getTotalPrice();
         assertEquals(expected, actual);
     }
-
-   /* @Test
-    public void testNoPromotionForC() {
-        // Scenario 8: Buy 3 C's (No promotion applies to C, price is 3 * 20)
-        IPromotion promotionForC = new BuyNItemsForFixedPricePromotion("C", 3, 50.0); // C promotion for 3 C's
-        Order order = new Order();
-        order.addItem(new OrderItem(productC, 3)); // 3 C's
-        promotionForC.apply(order); // Apply promotion
-        double expected = 3 * 20.0; // No promotion for C, total price is 60
-        double actual = order.getTotalPrice();
-        assertEquals(expected, actual);
-    }*/
 }
