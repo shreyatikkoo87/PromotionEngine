@@ -3,13 +3,17 @@ package com.example.promotion.engine.service;
 import com.example.promotion.engine.entity.Order;
 import com.example.promotion.engine.entity.OrderItem;
 import com.example.promotion.engine.service.IPromotion;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class BuyNItemsForFixedPricePromotion implements IPromotion {
-    private final String productId;
-    private final int minQuantity;
-    private final double fixedPrice;
+
+    private String productId;  // Injected from properties or configuration file
+
+    private int minQuantity;  // Injected from properties or configuration file
+
+    private double fixedPrice;  // Injected from properties or configuration file
 
     public BuyNItemsForFixedPricePromotion(String productId, int minQuantity, double fixedPrice) {
         this.productId = productId;
