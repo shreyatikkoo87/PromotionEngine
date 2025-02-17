@@ -9,11 +9,10 @@ import org.springframework.stereotype.Component;
 
 public class BuyNItemsForFixedPricePromotion implements IPromotion {
 
-    private String productId;  
+    private String productId;
 
-    private int minQuantity; 
-
-    private double fixedPrice;  
+    private int minQuantity;
+    private double fixedPrice;
 
     public BuyNItemsForFixedPricePromotion(String productId, int minQuantity, double fixedPrice) {
         this.productId = productId;
