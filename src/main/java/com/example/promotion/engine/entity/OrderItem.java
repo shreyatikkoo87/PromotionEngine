@@ -7,8 +7,6 @@ public class OrderItem {
 
     private boolean isPromotionApplied = false;
 
-
-
     private double totalPrice;
 
     public OrderItem(Product product, int quantity) {

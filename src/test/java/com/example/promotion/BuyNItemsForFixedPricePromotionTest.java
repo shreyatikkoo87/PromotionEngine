@@ -15,7 +15,6 @@ public class BuyNItemsForFixedPricePromotionTest {
     final Product productA = new Product("A", 50.0);
     final Product productB = new Product("B", 30.0);
     final Product productC = new Product("C", 20.0);
-    final Product productD = new Product("D", 15.0);
 
     // Promotion to apply: "3 A's for 130"
     IPromotion promotion = new BuyNItemsForFixedPricePromotion("A", 3, 130.0);
