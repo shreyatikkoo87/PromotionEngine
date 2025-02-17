@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 
 public class BuyNItemsForFixedPricePromotion implements IPromotion {
 
-    private String productId;  // Injected from properties or configuration file
+    private String productId;  
 
-    private int minQuantity;  // Injected from properties or configuration file
+    private int minQuantity; 
 
     private double fixedPrice;  // Injected from properties or configuration file
 
