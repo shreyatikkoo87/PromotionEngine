@@ -13,7 +13,7 @@ public class BuyNItemsForFixedPricePromotion implements IPromotion {
 
     private int minQuantity; 
 
-    private double fixedPrice;  // Injected from properties or configuration file
+    private double fixedPrice;  
 
     public BuyNItemsForFixedPricePromotion(String productId, int minQuantity, double fixedPrice) {
         this.productId = productId;
