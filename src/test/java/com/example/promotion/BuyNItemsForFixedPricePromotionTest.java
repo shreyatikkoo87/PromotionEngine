@@ -7,7 +7,8 @@ import com.example.promotion.engine.entity.Product;
 import com.example.promotion.engine.service.BuyNItemsForFixedPricePromotion;
 import com.example.promotion.engine.service.IPromotion;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BuyNItemsForFixedPricePromotionTest {
 

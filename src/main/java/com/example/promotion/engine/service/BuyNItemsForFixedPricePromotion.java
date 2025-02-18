@@ -2,9 +2,6 @@ package com.example.promotion.engine.service;
 
 import com.example.promotion.engine.entity.Order;
 import com.example.promotion.engine.entity.OrderItem;
-import com.example.promotion.engine.service.IPromotion;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 
 public class BuyNItemsForFixedPricePromotion implements IPromotion {
